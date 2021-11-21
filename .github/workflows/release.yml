@@ -1,10 +1,11 @@
 name: release
-  on:
-    push: 
-      branches:
-        - main
-  steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
+on:
+  push:
+    branches:
+      - main
+jobs: Release
+steps:
+  - uses: actions/checkout@v2
+  - uses: actions/setup-node@v2
+    with:
+      node-version: '14'
