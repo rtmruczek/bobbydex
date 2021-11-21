@@ -1,7 +1,5 @@
-import { assign, createMachine } from 'xstate';
+import { createMachine } from 'xstate';
 import qs from 'query-string';
-import { interpret } from 'xstate';
-import { inspect } from '@xstate/inspect';
 
 const queryString = new URLSearchParams({
   client_id: process.env.REACT_APP_DISCORD_CLIENT_ID!,
@@ -31,7 +29,9 @@ const authMachine = createMachine({
         ],
       },
     },
-    authorizing: {},
+    authorizing: {
+      entry: () => window.location.assign(discordAuthUrl),
+    },
     retrieving_token: {},
     authed: {},
   },

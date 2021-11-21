@@ -18,7 +18,11 @@
     "typescript": "^4.5.2",
     "web-vitals": "^1.1.2",
     "whatwg-fetch": "^3.6.2",
-    "xstate": "^4.26.0"
+    "xstate": "^4.26.0",
+    "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "@xstate/inspect": "^0.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
