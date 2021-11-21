@@ -4,9 +4,9 @@
     "bobbydex-web"
   ],
   "dependencies": {
-    "query-string": "^7.0.1"
+    "query-string": "7.0.1"
   },
   "devDependencies": {
-    "@xstate/inspect": "^0.5.1"
+    "@xstate/inspect": "0.5.1"
   }
 }
