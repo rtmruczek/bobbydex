@@ -5,9 +5,13 @@ import authMachine from './machines/auth.machine';
 
 function App() {
   const [_state, send] = useMachine(authMachine, { devTools: true });
-  console.log(_state);
-  send({ type: 'TRY_AUTH' });
-  return <div>{process.env.NODE_ENV}</div>;
+  send('BEGIN_AUTH');
+  return (
+    <div>
+      <pre>{JSON.stringify(_state.context)}</pre>
+      <pre>{JSON.stringify(_state.value)}</pre>
+    </div>
+  );
 }
 
 export default App;
