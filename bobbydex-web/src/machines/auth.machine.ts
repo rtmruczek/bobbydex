@@ -9,6 +9,10 @@ const queryString = new URLSearchParams({
 }).toString();
 
 export const discordAuthUrl = `https://discord.com/api/oauth2/authorize?${queryString}`;
+const authorize = () => {
+  window.location.assign(discordAuthUrl);
+};
+
 const authMachine = createMachine({
   id: 'auth',
   initial: 'init',
@@ -30,15 +34,11 @@ const authMachine = createMachine({
       },
     },
     authorizing: {
-      entry: () => window.location.assign(discordAuthUrl),
+      entry: authorize,
     },
     retrieving_token: {},
     authed: {},
   },
 });
-
-const authorize = () => {
-  window.location.assign(discordAuthUrl);
-};
 
 export default authMachine;
