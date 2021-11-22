@@ -26,5 +26,3 @@ jobs:
         run: npm install
 
       - run: npm run build --workspaces
-      - run: |
-          echo "🍏 This job's status is ${{ job.status }}."

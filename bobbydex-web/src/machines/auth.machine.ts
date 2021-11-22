@@ -7,7 +7,6 @@ const queryString = new URLSearchParams({
   scope: 'identify email',
   response_type: 'code',
 }).toString();
-
 const authorize = () => {
   const discordAuthUrl = `https://discord.com/api/oauth2/authorize?${queryString}`;
   window.location.assign(discordAuthUrl);

@@ -1,8 +1,8 @@
 {
   "name": "bobbydex",
   "workspaces": [
-    "bobbydex-web"
+    "bobbydex-web",
+    "bobbydex-backend"
   ],
-  "dependencies": {},
   "devDependencies": {}
 }
